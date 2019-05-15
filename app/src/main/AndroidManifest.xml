@@ -2,6 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.laiweifeng.launcher">
 
+
+    <!-- android:sharedUserId="android.uid.system"-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+   <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+
+    <!-- 静默安装所需权限,如与Manifest报错，请运行Project->clean -->
+    <!-- 允许程序安装应用 -->
+    <!--<uses-permission android:name="android.permission.INSTALL_PACKAGES" />-->
+    <!-- 允许程序删除应用 -->
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <!-- 允许应用清除应用缓存 -->
+   <!-- <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />-->
+    <!-- 允许应用清除应用的用户数据 -->
+    <!--<uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />-->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +25,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity"
+            android:screenOrientation="landscape"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.AppActivity"
+            android:screenOrientation="landscape">
+
         </activity>
     </application>
 

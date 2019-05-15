@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">3DLauncher</string>
+
+   <string name="local_app_title">我的应用</string>
+    <string name="local_app_title_menue">按菜单键有更多选择</string>
+    <string name="unable_uninstall">系统应用无法卸载！</string>
 </resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="300dp"
+        android:background="@drawable/dialog_uninstall_bg"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="确定删除该应用吗？"/>
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:id="@+id/rootview_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="50dp">
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="21sp"
+                android:textColor="@color/white"
+                android:background="@drawable/selector_dialog_uninstall_button_change"
+                android:text="确定"
+                android:layout_marginRight="10dp"
+                />
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="21sp"
+                android:textColor="@color/white"
+                android:background="@drawable/selector_dialog_uninstall_button_change"
+                android:layout_marginLeft="10dp"
+                android:text="取消"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

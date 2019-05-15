@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@mipmap/home_bg"
+    android:id="@+id/rootview"
+    >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:tag="main_bg" />
+    <TextView
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/local_app_title" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:layout_alignTop="@+id/tv_title"
+        android:layout_alignBottom="@+id/tv_title"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/icon_caidanjian"
+            android:scaleType="fitXY"
+            android:alpha="0.6" />
+
+        <TextView android:textSize="21sp"
+            android:textColor="@android:color/white"
+            android:id="@+id/tv_menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/local_app_title_menue" />
+
+        <ImageView android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/pic_shuxian"
+            android:visibility="gone"/>
+
+        <TextView android:textSize="21sp"
+            android:textColor="@android:color/white"
+            android:id="@+id/tv_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+    <android.support.v17.leanback.widget.VerticalGridView
+        android:id="@+id/vg_grid_view"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+   <!-- <GridView
+        android:id="@+id/gridview"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:numColumns="6"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </GridView>-->
+</RelativeLayout>
